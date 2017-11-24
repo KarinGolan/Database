@@ -1,10 +1,10 @@
-package Test;
+package mypackage;
 
 
 public class Revenue {
 	
 
-	private int add[]= new int[100];
+	private int add[]= new int[10];
 	
 	public double myRevenue (double total_cost) {
 		System.out.println("order\tRevenue");
