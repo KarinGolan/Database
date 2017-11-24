@@ -4,24 +4,22 @@ package mypackage;
 public class Revenue {
 	
 
-	private int add[]= new int[10];
+	private double add[]= new double[10];
 	
 	public double myRevenue (double total_cost) {
 		System.out.println("order\tRevenue");
 		
-		for (int index=0; index <add.length; index++)
-		{
-			add[index] = index;
-			
-	    }
-		
-		
 		for (int index=0; index < add.length; index++)
 		{
-			
-			System.out.println(add[index]+"\t"+ total_cost);
+			if(add[index] != 0.0 ) {
+				continue;
+			}
+			else {
+				add[index] = total_cost;
+				System.out.println(index +"\t"+ total_cost);
+				break;
+			}
 	    }
 		return total_cost;
-	
 	}
 }
