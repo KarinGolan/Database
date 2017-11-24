@@ -6,7 +6,7 @@ public class FoodOrders {
 		
 		double total_cost = Double.parseDouble (args[0]);
 		
-		Revenue revenueobject = new Revenue();
+		Revenue revenueobject1 = new Revenue();
 	
 		revenueobject.myRevenue(total_cost);
 					
