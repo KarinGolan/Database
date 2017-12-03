@@ -1,25 +1,16 @@
-
-# Cookbook Name:: kk-
+# Cookbook Name:: Database-
 # Recipe:: default
 #
 # Copyright (C) 2017 
 #
-    
-# Cookbook Name:: kk-
-# Recipe:: default
-#
-# Copyright (C) 2017 
-#
-s3_file "/home/ec2-user/Database.jar" do
-        remote_path "Database.jar"
-        bucket "databasebucket1"
-        s3_url "https://s3-eu-west-1.amazonaws.com/databasebucket1"
-        action :create
-    end
+execute "download file from  s3" do
+command "aws s3 cp s3://databasebucket1/Database-0.0.1-SNAPSHOT.jar   /home/ec2-user/Database-0.0.1-SNAPSHOT.jar"
+ action "run"
+end
 
 
 execute "running Database.jar" do
-  command "java -jar /home/ec2-user/Database.jar "
+  command "java -jar /home/ec2-user/Database-0.0.1-SNAPSHOT.jar "
   cwd "/home/ec2-user"
   action "run"
 end
