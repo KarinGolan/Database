@@ -4,10 +4,10 @@ package mypackage;
 public class Revenue {
 	
 
-	private double add[]= new double[10];
+	private double add[]= new double[100];
 	
 	public double myRevenue (double total_cost) {
-		System.out.println("order\tRevenue");
+		
 		
 		for (int index=0; index < add.length; index++)
 		{
