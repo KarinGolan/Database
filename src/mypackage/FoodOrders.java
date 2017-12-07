@@ -12,7 +12,7 @@ public class FoodOrders {
 	public static void main(String[] args )throws Exception, InterruptedException {
 		System.out.println("order\tRevenue");
 		Revenue revenueobject = new Revenue();
-		ServerSocket listener = new ServerSocket(9090);
+		ServerSocket listener = new ServerSocket(5050);
         try {
             while (true) {
                 new SaveToDB(revenueobject, listener.accept()).start();
