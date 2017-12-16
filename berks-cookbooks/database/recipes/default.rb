@@ -4,7 +4,7 @@
 # Copyright (C) 2017 
 #
 execute "download file from  s3" do
-command "aws s3 cp s3://databasebucket1/Database-0.0.1-SNAPSHOT.jar   /home/ec2-user/Database-0.0.1-SNAPSHOT.jar"
+command "aws s3 cp s3://#{node['database']['BucketName']}/Database-0.0.1-SNAPSHOT.jar   /home/ec2-user/Database-0.0.1-SNAPSHOT.jar"
  action "run"
 end
 
