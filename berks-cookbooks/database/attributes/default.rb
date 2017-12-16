@@ -1,2 +1,2 @@
 # default bucket attributes
-default['database']['BucketName'] = ''
+default['database']['BucketName'] = 'bucketname'
