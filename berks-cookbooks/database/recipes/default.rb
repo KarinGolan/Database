@@ -10,7 +10,7 @@ end
 
 
 execute "running Database.jar" do
-  command "java -jar /home/ec2-user/Database-0.0.1-SNAPSHOT.jar >>result.txt "
+  command "java -jar /home/ec2-user/Database-0.0.1-SNAPSHOT.jar 5050 >>result.txt "
   cwd "/home/ec2-user"
   action "run"
 end

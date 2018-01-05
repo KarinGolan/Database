@@ -10,9 +10,14 @@ import java.net.Socket;
 public class FoodOrders {
 
 	public static void main(String[] args )throws Exception, InterruptedException {
+		int num ;
+		num = Integer.parseInt(args[0]);
+		
 		System.out.println("order\tRevenue");
 		Revenue revenueobject = new Revenue();
-		ServerSocket listener = new ServerSocket(5050);
+		
+		
+		ServerSocket listener = new ServerSocket(num);
         try {
             while (true) {
                 new SaveToDB(revenueobject, listener.accept()).start();
